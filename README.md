@@ -15,9 +15,9 @@
 ## 提交本地仓库 git commit -m 'fix: xxx'
 
 feat, //新特性，新功能
-fix, //修改BUG
+fix, //修改 BUG
 docs, //文档修改
-style, //代码格式修改，注意不是CSS修改
+style, //代码格式修改，注意不是 CSS 修改
 refactor, //代码重构
 perf, //优化相关，比如提升性能，体验
 test, //测试用例修改

@@ -5,7 +5,7 @@
             height: height ? height : '24px',
         }"
     >
-        <use :xlink:href="'#icon-' + type" fill="white"></use>
+        <use :xlink:href="'#icon-' + type" :fill="color"></use>
     </svg>
 </template>
 

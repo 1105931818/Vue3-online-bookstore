@@ -3,8 +3,13 @@
         <div class="main">
             <div class="left">
                 <span>{{ mes }} &nbsp;&nbsp;&nbsp;&nbsp; 请 &nbsp;&nbsp;</span>
-                <span>登录 &nbsp; | &nbsp;</span>
-                <span>注册</span>
+                <span>
+                    <router-link to="/login">登录</router-link>
+                    &nbsp; | &nbsp;
+                </span>
+                <span>
+                    <router-link to="/register">注册</router-link>
+                </span>
             </div>
             <div class="right">
                 <ul>
@@ -42,6 +47,10 @@ mes.value = timer.message;
         align-items: center;
         font-size: 14px;
         color: $text-color;
+
+        a {
+            color: $menu-background;
+        }
 
         .right {
             ul {

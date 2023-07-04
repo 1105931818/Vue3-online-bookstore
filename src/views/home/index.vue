@@ -3,6 +3,8 @@
         <Navbar />
         <Search />
         <Recommend />
+        <Version />
+        <Brand />
         <Footer />
     </div>
 </template>
@@ -11,6 +13,8 @@
 import Navbar from './Navbar/index.vue';
 import Search from './Search/index.vue';
 import Recommend from './Recommend/index.vue';
+import Version from './Version/index.vue';
+import Brand from './Brand/index.vue';
 import Footer from './Footer/index.vue';
 </script>
 

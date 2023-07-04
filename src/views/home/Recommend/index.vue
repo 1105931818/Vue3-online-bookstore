@@ -1,7 +1,7 @@
 <template>
     <div class="recommend">
         <div class="main">
-            <span>作品分类</span>
+            <span>分类推荐</span>
             <ul>
                 <li>东方玄幻</li>
                 <li>史诗奇幻</li>
@@ -15,9 +15,10 @@
             </ul>
         </div>
     </div>
+
     <div class="rank">
         <div class="left">
-            <el-carousel height="450px">
+            <el-carousel :interval="4000" height="450px">
                 <el-carousel-item>
                     <div class="item">
                         <img src="../../../assets/image/book_pic1.jpeg" />
@@ -123,7 +124,7 @@
                             <h1>白夜行</h1>
                             <p>
                                 <span>作者</span>
-                                【日】[日] 东野圭吾&nbsp;&nbsp;&nbsp;&nbsp;
+                                【日】东野圭吾&nbsp;&nbsp;&nbsp;&nbsp;
                                 <span>出版年</span>
                                 2013-1-1
                             </p>
@@ -245,6 +246,7 @@
             </ul>
         </div>
     </div>
+
     <div class="ListContainer">
         <div class="list_left">
             <h1>热门标签</h1>
@@ -416,12 +418,15 @@
 
     .left {
         flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
         .item {
             width: 100%;
             height: 450px;
             padding: 30px;
             box-sizing: border-box;
-            border-radius: 4px;
+            border-radius: 10px;
+            overflow: hidden;
             background-color: $navbar-background;
             display: flex;
             img {
@@ -430,12 +435,16 @@
             .title {
                 flex: 1;
                 margin-left: 30px;
+                position: relative;
                 h1 {
                     margin: 0;
                     color: $menu-background;
                     font-size: 26px;
                     font-weight: 500;
                     margin-bottom: 30px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
                 p {
                     font-size: 14px;
@@ -460,9 +469,12 @@
                 }
 
                 button {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
                     width: 150px;
                     height: 40px;
-                    margin-left: 180px;
                     background-color: $menu-background;
                     color: white;
                     border: none;

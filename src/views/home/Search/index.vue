@@ -1,24 +1,6 @@
 <template>
     <div class="search_main">
-        <div class="search">
-            <div class="logo">
-                <h1>耶小说</h1>
-                <ul>
-                    <li>首页</li>
-                    <li>书库</li>
-                    <li>排行</li>
-                    <li>完本</li>
-                    <li>免费</li>
-                    <li>作者专区</li>
-                </ul>
-            </div>
-            <div class="input">
-                <input type="text" />
-                <div class="btn">
-                    <SvgIcon type="search" width="20px" height="20px" />
-                </div>
-            </div>
-        </div>
+        <Logo />
     </div>
 </template>
 

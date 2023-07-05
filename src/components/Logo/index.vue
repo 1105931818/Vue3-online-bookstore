@@ -4,8 +4,8 @@
             <h1>耶小说</h1>
             <ul>
                 <li><router-link to="/">首页</router-link></li>
-                <li>书库</li>
-                <li>排行</li>
+                <li><router-link to="/library">书库</router-link></li>
+                <li><router-link to="/leaderboard">排行</router-link></li>
                 <li>完本</li>
                 <li>免费</li>
                 <li>作者专区</li>

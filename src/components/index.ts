@@ -1,7 +1,8 @@
 import * as ElementPlusIconsVue from '@element-plus/icons-vue';
 import SvgIcon from './SvgIcon/index.vue';
 import Logo from './Logo/index.vue';
-const allGloablComponent: any = { SvgIcon, Logo };
+import Footer from './Footer/index.vue';
+const allGloablComponent: any = { SvgIcon, Logo, Footer };
 
 //对外暴露插件对象
 export default {

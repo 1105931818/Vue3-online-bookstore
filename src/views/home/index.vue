@@ -5,6 +5,7 @@
         <Recommend />
         <Version />
         <Brand />
+        <Brand tag="完本精品" name="新书推荐" />
         <Footer />
     </div>
 </template>
@@ -15,7 +16,6 @@ import Search from './Search/index.vue';
 import Recommend from './Recommend/index.vue';
 import Version from './Version/index.vue';
 import Brand from './Brand/index.vue';
-import Footer from './Footer/index.vue';
 </script>
 
 <style scoped lang="scss">

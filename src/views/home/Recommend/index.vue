@@ -3,15 +3,14 @@
         <div class="main">
             <span>分类推荐</span>
             <ul>
-                <li>东方玄幻</li>
-                <li>史诗奇幻</li>
-                <li>仙侠洪荒</li>
-                <li>都市奇遇</li>
-                <li>校园言情</li>
-                <li>战争幻想</li>
-                <li>诸天无限</li>
-                <li>历史架空</li>
-                <li>查看更多</li>
+                <li
+                    v-for="(item, index) in recommend"
+                    :key="index"
+                    @click="gotolibrary(index)"
+                >
+                    {{ item }}
+                </li>
+                <li><router-link to="/library">查看更多</router-link></li>
             </ul>
         </div>
     </div>
@@ -36,7 +35,7 @@
                                 哈佛大学傅高义教授倾十年心力完成的巨著《邓小平时代》，是对邓小平跌宕起伏的一生以及中国惊险崎岖的改革开放之路的全景式描述。作者以丰富的史料、国内外重要的研究成果、档案资料和为数众多的独家访谈为基础，对邓小平个人性格及执政风格进行了深层分析，并对中国改革开放史进行了完整而独到的阐释。全书人物、事件众多，既有对毛泽东、周恩来、邓小平、陈云等人相互关系的细致解读，又有对三中全会、权力过渡、中美建交、政改试水、经济特区、一国两制、九二南巡等重大事件和决策的深入分析。全书持论严谨、脉络清晰、观点鲜明、叙述生动，力图使人物言行符合历史情境，对改革开放的历史进程亦时有独特看法，引人深思，被誉为邓小平研究“纪念碑式”的著作。
                                 读懂《邓小平时代》，读懂这段历史，读懂“仍然生活在邓小平时代”的我们自己的现在和未来。
                             </i>
-                            <button>立即阅读</button>
+                            <button @click="gotoRead()">立即阅读</button>
                         </div>
                     </div>
                 </el-carousel-item>
@@ -55,7 +54,7 @@
                                 《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵前去求药，却在途中被国民党抓去当壮丁。经过几番波折回到家里，才知道母亲早已去世，妻子家珍含辛茹苦地养大两个儿女。此后更加悲惨的命运一次又一次降临到福贵身上，他的妻子、儿女和孙子相继死去，最后只剩福贵和一头老牛相依为命，但老人依旧活着，仿佛比往日更加洒脱与坚强。
                                 《活着(新版)》荣获意大利格林扎纳•卡佛文学奖最高奖项（1998年）、台湾《中国时报》10本好书奖（1994年）、香港“博益”15本好书奖（1994年）、第三届世界华文“冰心文学奖”（2002年），入选香港《亚洲周刊》评选的“20世纪中文小说百年百强”、中国百位批评家和文学编辑评选的“20世纪90年代最有影响的10部作品”。
                             </i>
-                            <button>立即阅读</button>
+                            <button @click="gotoRead()">立即阅读</button>
                         </div>
                     </div>
                 </el-carousel-item>
@@ -84,7 +83,7 @@
                                 年轻时看过《梅岗城故事》（即《杀死一只知更鸟》），对片中法律人为弱势者争取权益奋斗，为恶法非法或恶法亦法辩论的故事感到澎湃不已，更加确定要成为法律人的心愿。
                                 ——许宗力（台大法学院院长）
                             </i>
-                            <button>立即阅读</button>
+                            <button @click="gotoRead()">立即阅读</button>
                         </div>
                     </div>
                 </el-carousel-item>
@@ -113,7 +112,7 @@
                                 升入大学后的郭晓奇仍旧爱着高中时的补习教师李国华，而这位文质彬彬的补习教师并不只有平时人们眼中受人尊敬的老师形象的一面……
                                 这是一部惊人而特别的小说，小说作者既具有高度敏锐的感受力、又是一个近距离目击者，使这整件事像一个“幸存的标本”那样地被保留下来。整本书反覆地、用极度贴近被侵害者的视角，直直逼视那种“别人夺去你某个珍贵之物”的痛苦──且掠夺之人是以此为乐。
                             </i>
-                            <button>立即阅读</button>
+                            <button @click="gotoRead()">立即阅读</button>
                         </div>
                     </div>
                 </el-carousel-item>
@@ -141,7 +140,7 @@
                                 我从来就没有太阳，所以不怕失去。”
                                 “只希望能手牵手在太阳下散步”，这句象征本书故事内核的绝望念想，有如一个美丽的幌子，随着无数凌乱、压抑、悲凉的事件片段如纪录片一样一一还原，最后一丝温情也被完全抛弃，万千读者在一曲救赎罪恶的爱情之中悲切动容。
                             </i>
-                            <button>立即阅读</button>
+                            <button @click="gotoRead()">立即阅读</button>
                         </div>
                     </div>
                 </el-carousel-item>
@@ -377,7 +376,28 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+import { reactive } from 'vue';
+
+const recommend = reactive<string[]>([
+    '东方玄幻',
+    '史诗奇幻',
+    '仙侠洪荒',
+    '都市奇遇',
+    '校园言情',
+    '战争幻想',
+    '诸天无限',
+    '历史架空',
+]);
+const router = useRouter();
+const gotoRead = () => {
+    router.push({ name: 'chapter' });
+};
+const gotolibrary = (index: number) => {
+    router.push({ name: 'library', params: { id: index } });
+};
+</script>
 
 <style scoped lang="scss">
 .recommend {
@@ -406,6 +426,10 @@
             display: flex;
             justify-content: space-around;
             color: $text-color;
+
+            li a {
+                color: $text-color;
+            }
         }
     }
 }

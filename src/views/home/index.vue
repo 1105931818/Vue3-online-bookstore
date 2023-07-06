@@ -6,6 +6,7 @@
         <Version />
         <Brand />
         <Brand tag="完本精品" name="新书推荐" />
+        <Sidebar />
         <Footer />
     </div>
 </template>

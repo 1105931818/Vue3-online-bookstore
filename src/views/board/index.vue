@@ -242,18 +242,19 @@
                         </div>
                     </li>
                 </ul>
+                <el-pagination
+                    v-model:current-page="page"
+                    v-model:page-size="pageSize"
+                    background
+                    class="page"
+                    layout="prev, pager, next, jumper"
+                    :total="1000"
+                    @size-change="handleSizeChange"
+                    @current-change="handleCurrentChange"
+                />
             </div>
         </div>
-        <el-pagination
-            v-model:current-page="page"
-            v-model:page-size="pageSize"
-            background
-            class="page"
-            layout="prev, pager, next, jumper"
-            :total="1000"
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-        />
+        <Sidebar />
         <Footer />
     </div>
 </template>
@@ -439,7 +440,7 @@ const changeBoard = (item: string, index: number) => {
     .page {
         width: 600px;
         margin: auto;
-        margin-top: 30px;
+        margin-top: 80px;
         margin-bottom: 50px;
     }
 }

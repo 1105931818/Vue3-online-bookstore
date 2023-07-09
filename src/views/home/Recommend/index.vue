@@ -378,6 +378,8 @@ const gotoCont = (item: Y) => {
     width: 100%;
     height: 70px;
     border-bottom: 2px solid $menu-background;
+    background: rgba($color: #ffffff, $alpha: 0.3);
+    margin-top: -70px;
 
     .main {
         width: 80%;
@@ -391,7 +393,7 @@ const gotoCont = (item: Y) => {
             height: 100%;
             font-size: 26px;
             font-weight: 500;
-            color: $menu-background;
+            color: black;
             text-align: center;
             line-height: 70px;
         }
@@ -399,10 +401,10 @@ const gotoCont = (item: Y) => {
             flex: 1;
             display: flex;
             justify-content: space-around;
-            color: $text-color;
+            color: #3c2a25;
 
             li a {
-                color: $text-color;
+                color: #3c2a25;
             }
         }
     }
@@ -412,7 +414,7 @@ const gotoCont = (item: Y) => {
     width: 80%;
     margin: auto;
     display: flex;
-    margin-top: 20px;
+    margin-top: 50px;
 
     .left {
         flex: 1;

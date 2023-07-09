@@ -1,7 +1,10 @@
 <template>
     <div class="main">
         <div class="logo">
-            <h1>耶小说</h1>
+            <div class="title">
+                <img src="../../assets/image/logo.jpg" />
+                <h1>耶小说</h1>
+            </div>
             <ul>
                 <li><router-link to="/">首页</router-link></li>
                 <li><router-link to="/library">书库</router-link></li>
@@ -33,9 +36,19 @@
     color: $menu-background;
 
     .logo {
-        margin-left: 40px;
         display: flex;
 
+        .title {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 60px;
+                height: 60px;
+                margin-right: 10px;
+                border-radius: 6px;
+            }
+        }
         ul {
             display: flex;
             align-items: center;

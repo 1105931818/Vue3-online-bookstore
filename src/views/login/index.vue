@@ -3,7 +3,7 @@
         <Logo />
         <div class="cont">
             <div class="from">
-                <h1>用户登录</h1>
+                <h1 style="text-align: center">用户登录</h1>
                 <form action="">
                     <input
                         type="text"
@@ -29,9 +29,15 @@
                     <br />
                 </form>
                 <button>登 &nbsp;&nbsp; 录</button>
+                <div class="reg">
+                    <a href="">忘记密码</a>
+                    <router-link to="/register">立即注册</router-link>
+                </div>
             </div>
         </div>
-        <div class="footer"></div>
+        <div class="footer">
+            <Footer />
+        </div>
     </div>
 </template>
 
@@ -88,7 +94,6 @@
             top: 50%;
             transform: translateY(-50%);
             right: 200px;
-            text-align: center;
             border-radius: 10px;
             color: $menu-background;
 
@@ -96,25 +101,43 @@
                 margin-bottom: 50px;
             }
             input {
-                width: 300px;
+                width: 330px;
                 height: 40px;
-                margin-bottom: 35px;
+                margin-bottom: 30px;
                 border: 1px solid $text-color;
                 border-radius: 4px;
-                font-size: 16px;
+                font-size: 14px;
                 color: $text-color;
             }
 
             .check {
                 width: 12px;
                 height: 12px;
-                margin-bottom: 60px;
+                margin-bottom: 45px;
             }
 
             span {
+                text-align: left;
+                font-size: 14px;
                 color: black;
 
                 i {
+                    color: $menu-background;
+                }
+            }
+
+            .reg {
+                width: 100%;
+                height: 40px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+
+                a {
+                    display: block;
+                    font-size: 14px;
                     color: $menu-background;
                 }
             }
@@ -123,6 +146,7 @@
                 width: 300px;
                 height: 40px;
                 margin-top: 10px;
+                margin-left: 20px;
                 font-size: 18px;
                 background-color: $menu-background;
                 color: white;

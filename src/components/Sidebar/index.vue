@@ -3,15 +3,15 @@
         <ul>
             <li>
                 <el-icon style="font-size: 24px"><Collection /></el-icon>
-                <i>我的书架</i>
+                <p>我的书架</p>
             </li>
             <li>
                 <el-icon style="font-size: 24px"><ChatDotRound /></el-icon>
-                <i>联系客服</i>
+                <p>联系客服</p>
             </li>
             <li>
                 <el-icon style="font-size: 24px"><Cellphone /></el-icon>
-                <i>手机端</i>
+                <p>手机端</p>
             </li>
         </ul>
         <span v-show="isShow" @click="gotoTop()">
@@ -56,12 +56,14 @@ const gotoTop = () => {
             box-shadow: 2px 2px 2px 2px #e4e4e4;
             border-radius: 4px;
             text-align: center;
-            font-size: 12px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
             background-color: white;
+            p {
+                font-size: 12px;
+            }
         }
     }
 
